@@ -237,287 +237,40 @@
 
     <!-- Tab switcher -->
     <div class="tab-switcher">
-      <button class="tab-btn active" onclick="switchTab('ext')">VS Code Extension</button>
-      <button class="tab-btn" onclick="switchTab('web')">Web Agent Dashboard</button>
+      <button class="tab-btn" onclick="switchTab('ext')">VS Code Extension</button>
+      <button class="tab-btn active" onclick="switchTab('web')">Web Agent Dashboard</button>
     </div>
 
     <!-- ── EXTENSION SCREENSHOTS ── -->
-    <div class="tab-content active" id="tab-ext">
-      <div class="screenshots-grid">
-
-        <div class="screenshot-card">
-          <div class="screenshot-mockup vscode-mock">
-            <div class="mock-titlebar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-title">NovaForge — Pipeline</span>
-            </div>
-            <div class="mock-body sidebar-mock">
-              <div class="mock-input"><span class="mock-label">Figma URL</span><span class="mock-field">https://figma.com/design/abc...</span></div>
-              <div class="mock-input"><span class="mock-label">Output Folder</span><span class="mock-field">C:\Projects\my-app</span></div>
-              <div class="mock-select"><span class="mock-label">Default Model</span><span class="mock-dropdown">gpt-4o</span></div>
-              <div class="mock-agents">
-                <div class="mock-agent-row"><span class="mock-check on"></span> Figma Architect <span class="mock-model-tag">gpt-4o</span></div>
-                <div class="mock-agent-row"><span class="mock-check on"></span> DB Schema Bot <span class="mock-model-tag">gpt-4o</span></div>
-                <div class="mock-agent-row"><span class="mock-check on"></span> Logic Engine <span class="mock-model-tag">claude-3.5-sonnet</span></div>
-                <div class="mock-agent-row"><span class="mock-check on"></span> UI Generator <span class="mock-model-tag">gpt-4o</span></div>
-                <div class="mock-agent-row"><span class="mock-check"></span> Security Review</div>
-                <div class="mock-agent-row"><span class="mock-check"></span> Code Review</div>
-              </div>
-              <div class="mock-btn-run">Run Pipeline</div>
-            </div>
-          </div>
-          <h3>Sidebar — Configure & Run</h3>
-          <p>Set Figma URL, choose output folder, pick models per-agent, toggle optional agents, and hit Run.</p>
+    <div class="tab-content" id="tab-ext">
+      <div class="ext-screenshots-placeholder">
+        <div class="placeholder-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-
-        <div class="screenshot-card">
-          <div class="screenshot-mockup vscode-mock">
-            <div class="mock-titlebar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-title">NovaForge — Pipeline Running</span>
-            </div>
-            <div class="mock-body progress-mock">
-              <div class="mock-step done"><span class="mock-icon">&#x2705;</span> Figma Architect <span class="mock-dur">12s</span></div>
-              <div class="mock-step done"><span class="mock-icon">&#x2705;</span> Spec Validator <span class="mock-dur">8s</span></div>
-              <div class="mock-step done"><span class="mock-icon">&#x2705;</span> DB Schema Bot <span class="mock-dur">15s</span></div>
-              <div class="mock-step done"><span class="mock-icon">&#x2705;</span> API Contract <span class="mock-dur">11s</span></div>
-              <div class="mock-step active"><span class="mock-icon spin">&#x25B6;</span> Logic Engine <span class="mock-dur">...</span></div>
-              <div class="mock-step pending"><span class="mock-icon dim-icon">&#x25CB;</span> UI Generator</div>
-              <div class="mock-step pending"><span class="mock-icon dim-icon">&#x25CB;</span> Test Generator</div>
-              <div class="mock-step pending"><span class="mock-icon dim-icon">&#x25CB;</span> Test Executor</div>
-              <div class="mock-log">
-                <span class="log-prefix">[Logic Engine]</span> Generating StudentsController.cs...
-              </div>
-            </div>
-          </div>
-          <h3>Real-Time Progress</h3>
-          <p>Watch each agent execute in real time with step-by-step logs and duration tracking.</p>
-        </div>
-
-        <div class="screenshot-card">
-          <div class="screenshot-mockup vscode-mock">
-            <div class="mock-titlebar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-title">NovaForge — Run History</span>
-            </div>
-            <div class="mock-body history-mock">
-              <div class="mock-history-header">Pipeline Run History</div>
-              <div class="mock-history-sub">3 runs recorded</div>
-              <div class="mock-run-card">
-                <div class="mock-run-row"><span>&#x2705;</span> <span class="mock-run-date">2/16/2026, 2:30 PM</span> <span class="mock-dur">94s</span> <span class="mock-steps-count">10/10 steps</span> <span class="mock-link">View Report</span> <span class="mock-link">Open Folder</span></div>
-                <div class="mock-run-url">https://figma.com/design/student-portal...</div>
-              </div>
-              <div class="mock-run-card">
-                <div class="mock-run-row"><span>&#x2705;</span> <span class="mock-run-date">2/15/2026, 4:12 PM</span> <span class="mock-dur">78s</span> <span class="mock-steps-count">10/10 steps</span> <span class="mock-link">View Report</span> <span class="mock-link">Open Folder</span></div>
-                <div class="mock-run-url">https://figma.com/design/dashboard...</div>
-              </div>
-              <div class="mock-run-card failed">
-                <div class="mock-run-row"><span>&#x274C;</span> <span class="mock-run-date">2/14/2026, 11:00 AM</span> <span class="mock-dur">23s</span> <span class="mock-steps-count">3/10 steps</span> <span class="mock-link">View Report</span></div>
-                <div class="mock-run-url">https://figma.com/design/ecommerce...</div>
-              </div>
-            </div>
-          </div>
-          <h3>Run History</h3>
-          <p>Every pipeline run is recorded with timing, step counts, and quick access to reports and output folders.</p>
-        </div>
-
-        <div class="screenshot-card">
-          <div class="screenshot-mockup vscode-mock">
-            <div class="mock-titlebar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-title">NovaForge — Summary Report</span>
-            </div>
-            <div class="mock-body report-mock">
-              <div class="mock-report-title">Pipeline Summary Report</div>
-              <div class="mock-report-stats">
-                <div class="mock-stat green"><span class="mock-stat-num">10</span><span class="mock-stat-label">Steps Passed</span></div>
-                <div class="mock-stat blue"><span class="mock-stat-num">94s</span><span class="mock-stat-label">Total Duration</span></div>
-                <div class="mock-stat purple"><span class="mock-stat-num">24</span><span class="mock-stat-label">Files Generated</span></div>
-              </div>
-              <div class="mock-report-section">
-                <div class="mock-report-heading">Generated Output</div>
-                <div class="mock-file-tree">
-                  <div>&#128193; StudentPortal/</div>
-                  <div>&nbsp;&nbsp;&#128193; frontend/ <span class="mock-badge">Angular 21</span></div>
-                  <div>&nbsp;&nbsp;&#128193; backend/ <span class="mock-badge">.NET 10</span></div>
-                  <div>&nbsp;&nbsp;&#128193; tests/</div>
-                  <div>&nbsp;&nbsp;&#128196; README.md</div>
-                </div>
-              </div>
-              <div class="mock-btn-open">Open Output Folder</div>
-            </div>
-          </div>
-          <h3>Summary Report</h3>
-          <p>Post-run report showing stats, generated files, test results, and security findings at a glance.</p>
-        </div>
-
+        <h3>VS Code Extension Screenshots</h3>
+        <p>Screenshots of the extension running inside VS Code — coming soon.</p>
+        <p style="font-size:13px; margin-top:8px">Includes: Sidebar configuration, real-time progress, run history, and summary reports.</p>
       </div>
     </div>
 
     <!-- ── WEB AGENT SCREENSHOTS ── -->
-    <div class="tab-content" id="tab-web">
+    <div class="tab-content active" id="tab-web">
       <div class="screenshots-grid">
-
         <div class="screenshot-card">
-          <div class="screenshot-mockup browser-mock">
-            <div class="mock-titlebar browser-bar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-url-bar">localhost:3000</span>
-            </div>
-            <div class="mock-body web-dashboard-mock">
-              <div class="web-nav">
-                <span class="web-nav-logo">NovaForge</span>
-                <span class="web-nav-item active">Dashboard</span>
-                <span class="web-nav-item">Settings</span>
-                <span class="web-nav-item">Onboard</span>
-              </div>
-              <div class="web-form-area">
-                <div class="web-form-row">
-                  <span class="mock-label">Figma Design URL</span>
-                  <span class="mock-field">https://figma.com/design/XYZ...</span>
-                </div>
-                <div class="web-form-row">
-                  <span class="mock-label">AI Provider</span>
-                  <div class="web-provider-pills">
-                    <span class="web-pill active">OpenAI</span>
-                    <span class="web-pill">Anthropic</span>
-                    <span class="web-pill">Bedrock</span>
-                  </div>
-                </div>
-                <div class="web-form-row">
-                  <span class="mock-label">Model</span>
-                  <span class="mock-dropdown">gpt-4o</span>
-                </div>
-                <div class="web-form-row">
-                  <span class="mock-label">GitHub Repo</span>
-                  <span class="mock-field">github.com/org/my-project</span>
-                </div>
-                <div class="mock-btn-run web-btn">Start Pipeline</div>
-              </div>
-            </div>
-          </div>
-          <h3>Dashboard — Submit & Configure</h3>
-          <p>Browser-based dashboard with provider selection, GitHub integration, and keyboard shortcuts.</p>
+          <img src="images/web-dashboard.png" alt="NovaForge Web Dashboard" class="screenshot-img" />
+          <h3>Dashboard — Design to Production</h3>
+          <p>Main dashboard with orbiting agent icons, run history sidebar, and quick actions to start a build or configure settings.</p>
         </div>
-
         <div class="screenshot-card">
-          <div class="screenshot-mockup browser-mock">
-            <div class="mock-titlebar browser-bar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-url-bar">localhost:3000</span>
-            </div>
-            <div class="mock-body web-monitor-mock">
-              <div class="web-nav">
-                <span class="web-nav-logo">NovaForge</span>
-                <span class="web-nav-item active">Dashboard</span>
-                <span class="web-nav-item">Settings</span>
-              </div>
-              <div class="web-monitor-grid">
-                <div class="web-monitor-left">
-                  <div class="web-agent-card done"><span class="web-agent-icon">&#x2705;</span><div><strong>Figma Architect</strong><div class="web-agent-time">12.3s</div></div></div>
-                  <div class="web-agent-card done"><span class="web-agent-icon">&#x2705;</span><div><strong>Spec Validator</strong><div class="web-agent-time">8.1s</div></div></div>
-                  <div class="web-agent-card done"><span class="web-agent-icon">&#x2705;</span><div><strong>DB Schema Bot</strong><div class="web-agent-time">14.7s</div></div></div>
-                  <div class="web-agent-card done"><span class="web-agent-icon">&#x2705;</span><div><strong>API Contract</strong><div class="web-agent-time">10.2s</div></div></div>
-                  <div class="web-agent-card running"><span class="web-agent-icon spin">&#x25B6;</span><div><strong>Logic Engine</strong><div class="web-agent-time">running...</div></div></div>
-                  <div class="web-agent-card pending"><span class="web-agent-icon">&#x25CB;</span><div><strong>UI Generator</strong></div></div>
-                  <div class="web-agent-card pending"><span class="web-agent-icon">&#x25CB;</span><div><strong>Test Generator</strong></div></div>
-                </div>
-                <div class="web-monitor-right">
-                  <div class="web-log-panel">
-                    <div class="web-log-title">Live Logs</div>
-                    <div class="web-log-line"><span class="log-ts">14:32:05</span> <span class="log-prefix">[Logic Engine]</span> Generating controllers...</div>
-                    <div class="web-log-line"><span class="log-ts">14:32:03</span> <span class="log-prefix">[API Contract]</span> 5 endpoints generated</div>
-                    <div class="web-log-line"><span class="log-ts">14:31:58</span> <span class="log-prefix">[DB Schema]</span> 3 entities created</div>
-                    <div class="web-log-line"><span class="log-ts">14:31:45</span> <span class="log-prefix">[Figma]</span> Extracted 12 components</div>
-                  </div>
-                  <div class="web-metrics-mini">
-                    <div class="web-metric"><span class="web-metric-val">5/16</span><span class="web-metric-lbl">Agents</span></div>
-                    <div class="web-metric"><span class="web-metric-val">45s</span><span class="web-metric-lbl">Elapsed</span></div>
-                    <div class="web-metric"><span class="web-metric-val">gpt-4o</span><span class="web-metric-lbl">Model</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3>Real-Time Monitoring</h3>
-          <p>WebSocket-powered live view with agent cards, log stream, and metrics panel updating in real time.</p>
+          <img src="images/web-onboard-filled.png" alt="NovaForge Initialize Build" class="screenshot-img" />
+          <h3>Initialize Build</h3>
+          <p>Paste a Figma URL and NovaForge auto-detects the design file. View active agents, tech stack, and cache options before launching.</p>
         </div>
-
         <div class="screenshot-card">
-          <div class="screenshot-mockup browser-mock">
-            <div class="mock-titlebar browser-bar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-url-bar">localhost:3000</span>
-            </div>
-            <div class="mock-body web-report-mock">
-              <div class="web-nav">
-                <span class="web-nav-logo">NovaForge</span>
-                <span class="web-nav-item active">Dashboard</span>
-              </div>
-              <div class="web-report-content">
-                <div class="web-report-header">Pipeline Complete</div>
-                <div class="web-report-stats-row">
-                  <div class="mock-stat green"><span class="mock-stat-num">16</span><span class="mock-stat-label">Agents Passed</span></div>
-                  <div class="mock-stat blue"><span class="mock-stat-num">2m 14s</span><span class="mock-stat-label">Total Time</span></div>
-                  <div class="mock-stat purple"><span class="mock-stat-num">31</span><span class="mock-stat-label">Files Generated</span></div>
-                  <div class="mock-stat orange"><span class="mock-stat-num">PR #42</span><span class="mock-stat-label">Created</span></div>
-                </div>
-                <div class="web-report-agents">
-                  <div class="web-report-agent-row"><span>&#x2705;</span> Figma Architect <span class="mock-dur">12s</span></div>
-                  <div class="web-report-agent-row"><span>&#x2705;</span> Logic Engine <span class="mock-dur">28s</span></div>
-                  <div class="web-report-agent-row"><span>&#x2705;</span> UI Generator <span class="mock-dur">22s</span></div>
-                  <div class="web-report-agent-row"><span>&#x2705;</span> Test Executor <span class="mock-dur">18s</span></div>
-                  <div class="web-report-agent-row"><span>&#x2705;</span> Security Review <span class="mock-dur">9s</span></div>
-                  <div class="web-report-agent-row"><span>&#x2705;</span> PR Creator <span class="mock-dur">5s</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3>Summary Report + PR</h3>
-          <p>Full pipeline report with PR creation link, all 16 agent timings, and generated file inventory.</p>
+          <img src="images/web-settings.png" alt="NovaForge Agent Configuration" class="screenshot-img" />
+          <h3>Agent Configuration</h3>
+          <p>Enable or disable agents, select LLM models per agent (Bedrock, OpenAI, Anthropic), and configure DevOps options.</p>
         </div>
-
-        <div class="screenshot-card">
-          <div class="screenshot-mockup browser-mock">
-            <div class="mock-titlebar browser-bar">
-              <span class="mock-dots"><i></i><i></i><i></i></span>
-              <span class="mock-url-bar">localhost:3000/settings</span>
-            </div>
-            <div class="mock-body web-settings-mock">
-              <div class="web-nav">
-                <span class="web-nav-logo">NovaForge</span>
-                <span class="web-nav-item">Dashboard</span>
-                <span class="web-nav-item active">Settings</span>
-              </div>
-              <div class="web-settings-content">
-                <div class="web-settings-title">Settings</div>
-                <div class="web-settings-group">
-                  <div class="web-settings-label">OpenAI API Key</div>
-                  <span class="mock-field">sk-proj-****...****</span>
-                </div>
-                <div class="web-settings-group">
-                  <div class="web-settings-label">Anthropic API Key</div>
-                  <span class="mock-field">sk-ant-****...****</span>
-                </div>
-                <div class="web-settings-group">
-                  <div class="web-settings-label">Figma Token</div>
-                  <span class="mock-field">figd_****...****</span>
-                </div>
-                <div class="web-settings-group">
-                  <div class="web-settings-label">GitHub Token</div>
-                  <span class="mock-field">ghp_****...****</span>
-                </div>
-                <div class="web-settings-group">
-                  <div class="web-settings-label">Default Provider</div>
-                  <div class="web-provider-pills"><span class="web-pill active">OpenAI</span><span class="web-pill">Anthropic</span><span class="web-pill">Bedrock</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3>Settings &amp; Configuration</h3>
-          <p>Manage API keys, default providers, Figma tokens, and GitHub integration from one settings page.</p>
-        </div>
-
       </div>
     </div>
 

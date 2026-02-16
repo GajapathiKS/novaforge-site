@@ -262,14 +262,34 @@ code {
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* ── SCREENSHOTS (CSS Mockups) ── */
+.ext-screenshots-placeholder {
+  text-align: center; padding: 60px 24px;
+  background: var(--bg2); border-radius: var(--radius);
+  border: 1px dashed rgba(255,255,255,0.1);
+}
+.ext-screenshots-placeholder .placeholder-icon { color: var(--fg2); margin-bottom: 16px; opacity: 0.5; }
+.ext-screenshots-placeholder h3 { font-size: 20px; margin-bottom: 8px; }
+.ext-screenshots-placeholder p { color: var(--fg2); font-size: 15px; }
+
+/* ── SCREENSHOTS ── */
 .screenshots-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 32px;
 }
 .screenshot-card { text-align: center; }
 .screenshot-card h3 { margin-top: 16px; font-size: 18px; }
 .screenshot-card p { color: var(--fg2); font-size: 14px; margin-top: 4px; }
+.screenshot-img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.screenshot-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(108,99,255,0.2);
+}
 
 .screenshot-mockup {
   border-radius: var(--radius);
