@@ -262,14 +262,29 @@ code {
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-.ext-screenshots-placeholder {
-  text-align: center; padding: 60px 24px;
-  background: var(--bg2); border-radius: var(--radius);
-  border: 1px dashed rgba(255,255,255,0.1);
+/* Extension screenshot grid — narrower cards for sidebar screenshots */
+.ext-grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
 }
-.ext-screenshots-placeholder .placeholder-icon { color: var(--fg2); margin-bottom: 16px; opacity: 0.5; }
-.ext-screenshots-placeholder h3 { font-size: 20px; margin-bottom: 8px; }
-.ext-screenshots-placeholder p { color: var(--fg2); font-size: 15px; }
+.ext-grid .screenshot-img {
+  max-height: 420px;
+  object-fit: contain;
+  background: var(--bg2);
+}
+
+/* Placeholder cards for upcoming screenshots */
+.screenshot-placeholder {
+  border: 2px dashed rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  min-height: 280px;
+  display: flex; align-items: center; justify-content: center;
+}
+.screenshot-placeholder .placeholder-inner {
+  text-align: center; color: var(--fg2); opacity: 0.4;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  font-size: 13px;
+}
 
 /* ── SCREENSHOTS ── */
 .screenshots-grid {
