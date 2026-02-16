@@ -28,7 +28,7 @@
       <a href="#agents">Agents</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#install">Install</a>
-      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.1/novaforge-1.0.1.vsix" class="btn btn-sm">Download .vsix</a>
+      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.2/novaforge-1.0.2.vsix" class="btn btn-sm">Download .vsix</a>
     </div>
   </div>
 </nav>
@@ -48,13 +48,13 @@
       <strong>VS Code Extension</strong> or a <strong>Web Agent Dashboard</strong>.
     </p>
     <div class="hero-actions">
-      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.1/novaforge-1.0.1.vsix" class="btn btn-lg btn-primary">
+      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.2/novaforge-1.0.2.vsix" class="btn btn-lg btn-primary">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download Extension
       </a>
       <a href="#modes" class="btn btn-lg btn-outline">Compare Modes</a>
     </div>
-    <p class="hero-meta">v1.0.1 &middot; 13 MB &middot; Requires VS Code 1.90+ &amp; GitHub Copilot</p>
+    <p class="hero-meta">v1.0.2 &middot; 13 MB &middot; Requires VS Code 1.90+ &amp; GitHub Copilot</p>
   </div>
 </section>
 
@@ -104,10 +104,10 @@
           <li>Per-agent model selection (GPT-4o, Claude, etc.)</li>
           <li>Output opens directly in your workspace</li>
           <li>Run history &amp; reports in webview panels</li>
-          <li>13 agents (PR/DevOps agents disabled)</li>
+          <li>12 agents (PR/DevOps/Verify disabled)</li>
           <li>Works offline with Copilot subscription</li>
         </ul>
-        <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.1/novaforge-1.0.1.vsix" class="btn btn-primary mode-btn">Download Extension</a>
+        <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.2/novaforge-1.0.2.vsix" class="btn btn-primary mode-btn">Download Extension</a>
       </div>
 
       <div class="mode-card mode-web">
@@ -141,7 +141,7 @@
           <tr><td>Interface</td><td>VS Code Sidebar + Webview Panels</td><td>Next.js Browser Dashboard</td></tr>
           <tr><td>AI Provider</td><td>GitHub Copilot (free with subscription)</td><td>OpenAI / Anthropic / AWS Bedrock</td></tr>
           <tr><td>API Keys</td><td>None needed (uses Copilot)</td><td>Requires provider API key</td></tr>
-          <tr><td>Agents Active</td><td>13 (PR agents disabled)</td><td>All 16 agents</td></tr>
+          <tr><td>Agents Active</td><td>12 (PR/DevOps/Verify disabled)</td><td>All 16 agents</td></tr>
           <tr><td>GitHub PR Creation</td><td>-</td><td>Auto-creates branches &amp; PRs</td></tr>
           <tr><td>Real-Time Logs</td><td>VS Code output channel</td><td>WebSocket monitoring panel</td></tr>
           <tr><td>Model Selection</td><td>Per-agent from Copilot models</td><td>Per-run from multiple providers</td></tr>
@@ -339,20 +339,20 @@
         <h3>Install &amp; Run</h3>
         <div class="code-block">
           <div class="code-header">Option A: VS Code UI</div>
-          <p>Open VS Code &rarr; Extensions panel &rarr; <code>...</code> menu &rarr; <strong>Install from VSIX...</strong> &rarr; select <code>novaforge-1.0.1.vsix</code></p>
+          <p>Open VS Code &rarr; Extensions panel &rarr; <code>...</code> menu &rarr; <strong>Install from VSIX...</strong> &rarr; select <code>novaforge-1.0.2.vsix</code></p>
         </div>
         <div class="code-block">
           <div class="code-header">Option B: Command Line</div>
-          <pre>code --install-extension novaforge-1.0.1.vsix</pre>
+          <pre>code --install-extension novaforge-1.0.2.vsix</pre>
         </div>
         <p style="margin-top:12px; font-size:13px; color:var(--fg2)">Then open the NovaForge icon in the Activity Bar, paste a Figma URL, and click <strong>Run Pipeline</strong>.</p>
       </div>
     </div>
 
     <div class="download-cta">
-      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.1/novaforge-1.0.1.vsix" class="btn btn-lg btn-primary">
+      <a href="https://github.com/GajapathiKS/AgenticAI-Developer-Automation/releases/download/v1.0.2/novaforge-1.0.2.vsix" class="btn btn-lg btn-primary">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download novaforge-1.0.1.vsix
+        Download novaforge-1.0.2.vsix
       </a>
       <span class="download-size">13.2 MB</span>
     </div>
@@ -413,7 +413,7 @@ npm run start:all</pre>
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
-      <span>NovaForge v1.0.1</span>
+      <span>NovaForge v1.0.2</span>
       <span>&middot;</span>
       <span>Built with LangGraph + GitHub Copilot</span>
       <span>&middot;</span>
